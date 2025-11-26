@@ -20,9 +20,12 @@ function renderHabits(){
     habitList.innerHTML = '';
 
     if(habits.length === 0){
-        habitList.innerHTML = '<p class = "empty-state">Здесь пока нет привычек. Добавьте первую!</p>';
+        const emptyHabits = document.createElement('p');
+        emptyHabits.textContent = "Здесь пока нет привычек. Добавьте первую!";
+        habitList.appendChild(emptyHabits);
         return;
     }
+
 
     habits.forEach(habit=> {
         const card = document.createElement('div');
@@ -37,7 +40,7 @@ function renderHabits(){
         doneBtn.addEventListener('click', ()=>{
             doneBtn.textContent = '';
             const congrats = document.createElement('img');
-            congrats = done.svg;
+            congrats.src = "done.svg";
             doneBtn.appendChild(congrats);
         });
 
