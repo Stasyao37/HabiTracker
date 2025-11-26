@@ -116,3 +116,12 @@ body {
 .doneBtn:hover {
   background-color: #219653;
 }
+
+.calendar-wrapper {
+  width: 360px;
+  margin: 3em auto;
+  padding: 2em;
+  border: 1px solid #333335;
+  border-radius: 5px;
+  background: #fff;
+}

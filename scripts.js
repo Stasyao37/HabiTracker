@@ -11,7 +11,7 @@ function loadHabits(){
         renderHabits();
     }
 }
-//I just like to live
+
 function saveHabits(){
     localStorage.setItem('habits', JSON.stringify(habits));
 }
@@ -61,7 +61,7 @@ habitForm.addEventListener('submit', function(event){
        doneDays: []
     };
 
-   habits.push(newHabit);
+   habits = [newHabit, ...habits];
    saveHabits();
    renderHabits();
    habitInput.value = '';
